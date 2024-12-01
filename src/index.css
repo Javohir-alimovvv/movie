@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base {
+  @font-face {
+    font-family: 'nimadur';
+    src: url(/fonts/Roboto.woff2) format('woff2');
+  }
+} */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+li{
+  list-style-type: none;
+  color: inherit;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+button{
+  border: 2px solid transparent;
+  transition: .3s;
+  cursor: pointer;
+}
+button:hover{
+  /* border-color: #C61F1F; */
+  color: #C61F1F;
+  transition: .2s;
+}
+.active{
+  color: #C61F1F;
+}
