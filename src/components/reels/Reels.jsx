@@ -53,7 +53,7 @@ const Reels = () => {
                             data?.results?.map((item) => (
                                 <SwiperSlide key={item.id}>
                                     <div className='w-full h-[400px] rounded-xl relative cursor-pointer overflow-hidden image__carusel'>
-                                        <img className='w-full h-full rounded-xl object-cover  doctor' src={import.meta.env.VITE_IMAGE_URL + item.backdrop_path} alt="" />
+                                        <img className='w-full h-full rounded-xl object-cover  doctor' src={import.meta.env.VITE_IMAGE_URL + item.poster_path} alt="" />
                                         <div className='flex items-start justify-end gap-2 flex-col absolute bottom-0 opacity-0 hover__box'>
                                             <h3 className='text-main text-2xl bottom-0 font-bold ml-10'>{`Title: ${ item.title}`}</h3>
                                             <h3 className='text-text text-base bottom-0 font-medium mb-8 ml-10'> {`Popularity: ${ item.popularity}`}</h3>

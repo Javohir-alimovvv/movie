@@ -38,7 +38,7 @@ const Hero = () => {
                             data?.results?.map((movie) => (
                                 <SwiperSlide key={movie.id}>
                                     <div className='relative w-full h-full max-sm:h-[400px]'>
-                                        <img className='w-full h-full object-cover' src={import.meta.env.VITE_IMAGE_URL + movie.poster_path} alt="" />
+                                        <img className='w-full h-full object-cover' src={import.meta.env.VITE_IMAGE_URL + movie.backdrop_path} alt="" />
                                         <div className='absolute z-10 bottom-8 left-[50%] translate-x-[-50%] flex mx-0 items-center justify-center flex-col gap-4 max-sm:bottom-16'>
                                             <h3 className='text-5xl text-main font-medium max-sm:text-3xl'>{movie.title}</h3>
                                             <div className='flex gap-2'>
