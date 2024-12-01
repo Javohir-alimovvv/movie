@@ -1,4 +1,4 @@
-  .hero__content{
+  .hero__content {
     max-width: 1360px;
     width: 100%;
     height: auto;
@@ -7,40 +7,89 @@
     justify-content: center;
     margin: 0 auto;
     margin-bottom: 48px;
-    .hero__swiper__group{
+
+    .hero__swiper__group {
       width: 100%;
       height: auto;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      gap: 4px;
-      .swiper__big{
+      gap: 8px;
+
+      .swiper__big {
         width: 100%;
         height: 640px;
         border-radius: 12px;
 
-        .play__btn{
-          &:hover{
+        .play__btn {
+          &:hover {
             background: none;
             border-color: #C61F1F;
             color: #C61F1F;
           }
         }
       }
-      .swiper__small{
+
+      .swiper__small {
         width: 50%;
         height: 90px;
       }
     }
   }
-  
+
   .swiper__small .swiper-slide {
     height: 100%;
     opacity: 0.4;
   }
-  
+
   .swiper__small .swiper-slide-thumb-active {
     opacity: 1;
   }
-  
+
+
+  @media (max-width: 990px) {
+    .hero__content {
+      .hero__swiper__group {
+        .swiper__big {
+          height: 500px;
+        }
+
+        .swiper__small {
+          width: 65%;
+          height: 75px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+    .hero__content {
+      .hero__swiper__group {
+        .swiper__big {
+          height: 400px;
+        }
+
+        .swiper__small {
+          width: 80%;
+          height: 60px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero__content {
+      .hero__swiper__group {
+        padding: 0px 16px;
+        .swiper__big {
+          height: 360px;
+        }
+
+        .swiper__small {
+          width: 90%;
+          height: 45px;
+        }
+      }
+    }
+  }

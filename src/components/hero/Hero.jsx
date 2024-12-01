@@ -13,7 +13,8 @@ import { FaPlay } from "react-icons/fa";
 const Hero = () => {
     const { data } = useGetMovieQuery()
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
+    console.log(data);
+    
 
 
 
@@ -36,14 +37,14 @@ const Hero = () => {
                         {
                             data?.results?.map((movie) => (
                                 <SwiperSlide key={movie.id}>
-                                    <div className='relative w-full h-full'>
-                                        <img className='w-full h-full' src={import.meta.env.VITE_IMAGE_URL + movie.poster_path} alt="" />
-                                        <div className='absolute z-10 bottom-8 flex mx-0 items-center justify-center flex-col gap-4'>
-                                            <h3 className='text-3xl text-text font-medium'>{movie.title}</h3>
+                                    <div className='relative w-full h-full max-sm:h-[400px]'>
+                                        <img className='w-full h-full object-cover' src={import.meta.env.VITE_IMAGE_URL + movie.poster_path} alt="" />
+                                        <div className='absolute z-10 bottom-8 left-[50%] translate-x-[-50%] flex mx-0 items-center justify-center flex-col gap-4 max-sm:bottom-16'>
+                                            <h3 className='text-5xl text-main font-medium max-sm:text-3xl'>{movie.title}</h3>
                                             <div className='flex gap-2'>
-                                                <p className='text-sm text-text font-medium'>2024</p>
+                                                <p className='text-sm text-text font-medium'>{movie.release_date}</p>
                                             </div>
-                                            <button className='w-96 h-[52px] flex gap-2 items-center justify-center bg-text rounded-xl text-main border-2 border-solid border-transparent  play__btn text-base'><FaPlay className='text-2xl' /> Смотреть</button>
+                                            <button className='w-96 h-[52px] flex gap-2 items-center justify-center bg-text rounded-xl text-main border-2 border-solid border-transparent  play__btn text-base max-sm:w-56 '><FaPlay className='text-2xl' /> Смотреть</button>
                                         </div>
                                     </div>
                                 </SwiperSlide>
@@ -63,7 +64,7 @@ const Hero = () => {
                         {
                             data?.results?.map((content) => (
                                 <SwiperSlide key={content.id} className='rounded-xl'>
-                                    <img className='rounded-xl' src={import.meta.env.VITE_IMAGE_URL + content.poster_path} alt="" />
+                                    <img className='rounded-xl object-cover w-full h-full ' src={import.meta.env.VITE_IMAGE_URL + content.poster_path} alt="" />
                                 </SwiperSlide>
                             ))
                         }

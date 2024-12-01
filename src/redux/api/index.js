@@ -15,7 +15,7 @@ const baseQuery = async (args, api, extraOptions) => {
   });
 
   const result = await rawBaseQuery(args, api, extraOptions);
-
+  
   if (result.error) {
     const { status } = result.error;
     if (status === 401 || status === 403) {
