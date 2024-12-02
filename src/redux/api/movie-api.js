@@ -3,9 +3,9 @@ import { api } from './index'
 export const movieApi = api.injectEndpoints({
   endpoints: (build) => ({
     getMovie: build.query({
-      query: (params) => ({ 
-        url: '/movie/now_playing', 
-        params 
+      query: ({type, params}) => ({ 
+        url: `/movie/${type}`,
+        params
       }),
       providesTags: ["Movie"]
     }),

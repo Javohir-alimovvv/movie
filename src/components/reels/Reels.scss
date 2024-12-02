@@ -11,4 +11,11 @@
     }
 }
 
+.category__btn{
+    &:hover{
+        background: none;
+        border-color: #C61F1F;
+        color: #C61F1F;
+    }
+}
 

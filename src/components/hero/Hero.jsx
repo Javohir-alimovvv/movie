@@ -10,14 +10,9 @@ import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import { FaPlay } from "react-icons/fa";
 
 
-const Hero = () => {
-    const { data } = useGetMovieQuery()
+const Hero = ({ movie }) => {
+    const { data } = useGetMovieQuery({ type: movie, params: { page: 1 } })
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
-    console.log(data);
-    
-
-
-
     return (
         <>
             <div className='hero__content'>
